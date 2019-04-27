@@ -90,6 +90,11 @@ endif()
 
 set(INSTALL_DIR "bin/testsuite" CACHE PATH "Testsuite installation directory")
 
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+set(CMAKE_INSTALL_RPATH ${INSTALL_DIR})
+
 # Build rules for the test libraries (libtestdyninst, libtestproccontrol, etc.)
 # and the executables
 
